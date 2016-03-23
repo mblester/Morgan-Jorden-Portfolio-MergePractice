@@ -84,10 +84,44 @@ main>section, article {
 
 .major-navigation {
 	width: 100%;
-	background-color: #fff;
+	padding: 24px 0;
+	border: 1px solid #000;
+	border-left: none;
+	background-color: #EDEDED;
 	text-align: initial;
 	position: absolute;
 	top: 0;
+	left: 0;
+}
+
+.major-navigation > ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.major-navigation li {
+	margin-right: 24px;
+}
+
+.major-navigation > ul a {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	padding-right: 24px;
+	border: 1px solid #000;
+	border-left: none;
+	background-color: #fff;
+	text-align: right;
+	text-decoration: none;
+	display: block;
+}
+
+.major-navigation > ul li:nth-of-type(2) a {
+	border-top: none;
+	border-bottom: none;
+}
+
+.major-navigation > ul a:focus, .major-navigation > ul a:hover {
+	text-decoration: underline;
 }
 
 /* Major Navigation Controls */
@@ -120,7 +154,7 @@ main>section, article {
 	text-decoration: none;
 	position: absolute;
 	top: 12px;
-	right: 48px;
+	right: 24px;
 	opacity: 0.2;
 }
 
@@ -179,16 +213,49 @@ main>section, article {
 }
 
 @media (min-width: 960px) {
+	.major-navigation {
+		border: none;
+		background-color: #fff;
+	}
+
 	.major-navigation, #top:target .major-navigation {
 		/*When the viewport is 960px wide or wider, place .major-navigation back into the flow of the document */
 		transform: none;
 		position: static;
 	}
 
-	.major-navigation > ul, main {
+	main {
 		/*When the viewport is 960px wide or wider, make the main element and the navigation's ul 960px wide, and give them both even margins on the left and right */
 		width: 960px;
 		margin: 0 auto;
+	}
+
+	.major-navigation ul {
+		width: 960px;
+	}
+
+	.major-navigation > ul a {
+		width: 288px;
+		margin-right: 1em;
+		padding-top: 24px;
+		padding-right: 0;
+		padding-bottom: 24px;
+		border: 1px solid #000;
+		text-align: center;
+		float: left;
+	}
+
+	.major-navigation li {
+		margin-right: 0;
+	}
+
+	.major-navigation > ul li:nth-of-type(2) a {
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+	}
+
+	.major-navigation > ul li:last-of-type a {
+		margin-right: 0;
 	}
 
 	body>header h1 {
@@ -207,6 +274,22 @@ main>section, article {
 @media (max-width: 395px) {
 	body>header h1, body>header .tagline, body>header address {
 		/*When the viewport is pretty small, shrink down the size of most text in the page's header*/
+		font-size: initial;
+	}
+}
+
+@media (max-width: 379px) {
+	p {
+		font-size: 0.875em; /*21px/24px*/
+	}
+}
+
+@media (max-width: 319px) {
+	body>header h1 {
+		padding-top: 2em;
+	}
+
+	p {
 		font-size: initial;
 	}
 }

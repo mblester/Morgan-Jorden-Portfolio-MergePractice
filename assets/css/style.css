@@ -1,6 +1,6 @@
-*, *:before, *:after {
-	box-sizing: border-box;
-}
+/*- 1 - BASE --- */
+
+/* Helper Classes */
 
 .clearfix:after {
 	content: "";
@@ -21,13 +21,19 @@
 	display: none;
 }
 
+/* Resets */
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 }
 
 body>header, body>footer {
 	padding-left: 1em;
-	padding-right: 24px;
+	padding-right: 1em;
 }
 
 main {
@@ -46,9 +52,7 @@ address dd {
 	margin-bottom: 2em;
 }
 
-.social-media-links dt {
-	font-weight: 600;
-}
+/* Typography */
 
 body {
 	font-family: "Open Sans", sans-serif;
@@ -56,13 +60,37 @@ body {
 	line-height: 1.8;
 }
 
-main>section, article {
-	margin-bottom: 1em;
+.social-media-links dt {
+	font-weight: 600;
 }
 
 body>header, body>footer {
 	text-align: center;
 }
+
+/*closes BASE*/
+
+/*- 2 - LAYOUT --- */
+
+main>section, article {
+	margin-bottom: 1em;
+}
+
+/*closes LAYOUT*/
+
+/*- 3 - MODULES --- */
+
+/* Major Navigation */
+
+.major-navigation {
+	width: 100%;
+	background-color: #fff;
+	text-align: initial;
+	position: absolute;
+	top: 0;
+}
+
+/* Major Navigation Controls */
 
 .navigation-toggle-button {
 	font-size: 0;
@@ -86,18 +114,13 @@ body>header, body>footer {
 	transition: opacity 0.4s ease-in;
 }
 
-.major-navigation {
-	text-align: initial;
-	position: relative;
-}
-
 .navigation-close-button {
 	color: #000;
 	font-size: 0;
 	text-decoration: none;
 	position: absolute;
 	top: 12px;
-	right: 24px;
+	right: 48px;
 	opacity: 0.2;
 }
 
@@ -121,18 +144,34 @@ body>header, body>footer {
 	opacity: 1;
 }
 
-.navigation-close-button:focus:after,
-.navigation-close-button:hover:after {
+/*closes MODULES*/
 
+/*- 4 - STATE */
+
+.major-navigation, #top:target .major-navigation {
+	/* 	When the page loads, or when .navigation-close-button is clicked, slide .major-navigation offscreen to the left */
+	transform: translateX(-110vw);
 }
 
 #top:target .major-navigation {
-	/* 	When .major-navigation-close is clicked, slide .major-navigation offscreen to the left */
-	transform: translateX(-110vw);
+	/*When .navigation-close-button is clicked, display the animation in the following way: */
 	transition: transform 0.2s ease-in;
 }
 
+#major-navigation:target.major-navigation {
+	/*When the viewport is resized from above 960px to below 960px wide with .major-navigation activated, delay its jump from "static" to "absolute" in the following way: */
+	transform: none;
+	transition: transform 0.2s ease-in;
+}
+
+#top:target .navigation-close-button {
+	/*When the navigation is closed, fade the "Close" button out in the following way: */
+	opacity: 0;
+	transition: opacity 0.1s ease-in;
+}
+
 @media (min-width: 960px) {
+	/*When the viewport is 960px wide or wider, fade the Navigation controls out of view in the following way: */
 	.navigation-toggle-button:before, .navigation-toggle-button:after, .navigation-close-button, .navigation-close-button:before, .navigation-close-button:after {
 		opacity: 0;
 		transition: opacity 0.4s ease-in;
@@ -140,17 +179,26 @@ body>header, body>footer {
 }
 
 @media (min-width: 960px) {
+	.major-navigation, #top:target .major-navigation {
+		/*When the viewport is 960px wide or wider, place .major-navigation back into the flow of the document */
+		transform: none;
+		position: static;
+	}
+
 	.major-navigation > ul, main {
+		/*When the viewport is 960px wide or wider, make the main element and the navigation's ul 960px wide, and give them both even margins on the left and right */
 		width: 960px;
 		margin: 0 auto;
 	}
 
 	body>header h1 {
+		/*When the viewport is 960px wide or wider, resize the page's h1 */
 		font-size: 3em;
 		line-height: 1.2;
 	}
 
 	.tagline {
+		/*When the viewport is 960px wide or wider, resize the "tagline"*/
 		font-size: 1.5em;
 		line-height: 1.2; /*43.2px/36px*/
 	}
@@ -158,6 +206,9 @@ body>header, body>footer {
 
 @media (max-width: 395px) {
 	body>header h1, body>header .tagline, body>header address {
+		/*When the viewport is pretty small, shrink down the size of most text in the page's header*/
 		font-size: initial;
 	}
 }
+
+/*closes STATE*/

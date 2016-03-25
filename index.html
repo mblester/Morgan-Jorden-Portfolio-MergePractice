@@ -48,7 +48,7 @@
 			<ul class="clearfix">
 				<li><a href="#contact-information">Contact Information</a></li>
 				<li><a href="#about-me">About Me</a></li>
-				<li><a href="#portfolio">My Portfolio</a></li>
+				<li><a href="#portfolio-pieces">Portfolio</a></li>
 			</ul>
 
 			<a href="#top" class="navigation-close-button">Jump to the top of the page</a>
@@ -83,21 +83,97 @@
 			<!--  -->
 		</section>
 
-		<section id="portfolio">
+		<section class="portfolio-pieces" id="portfolio-pieces">
 			<header>
-			<h2>My Portfolio</h2>
-				<section>
+			<h2>Portfolio</h2>
+				<section class="portfolio-pieces-navigation" id="portfolio-pieces-navigation">
 				<h3 class="visually-hidden">Portfolio Navigation</h3>
 					<ul>
+
 						<!-- Repeat this for every portfolio piece you paste in: -->
 						<li><a href="#{{THE ARTICLE'S ID}}">{{THE ARTICLE'S H1's TEXT}}</a></li>
 						<!--  -->
+
 					</ul>
 				</section>
 			</header>
-			<!-- PASTE YOUR FILLED-IN "portfoliopiecetemplate.html" <article> HERE. PASTE EACH SUBSEQUENT PORTFOLIO PIECE BELOW THE PREVIOUS </article> -->
 
+			<!-- COPY AND PASTE EACH PORTFOLIO PIECE HERE: -->
+			<article class="portfolio-piece" id="{{SOME ID THAT NAMES/DESCRIBES THIS PIECE (WILL GO IN PORTFOLIO NAVIGATION HREF TOO)}}">
+			<h1>{{PORTFOLIO PIECE NAME}}</h1>
+
+				<section class="portfolio-piece-figures">
+				<h2 class="visually-hidden">Gallery</h2>
+
+					<!-- COPY AND PASTE EACH SUBSEQUENT <figure> BELOW THIS <figure> -->
+					<figure class="portfolio-piece-figure">
+						<img src="assets/images/portfolio/large/dummy.png" srcset="assets/images/portfolio/small/{{IMAGE FILENAME (SMALL)}} 200w, assets/images/portfolio/medium/{{IMAGE FILENAME (MEDIUM)}} 500w, assets/images/portfolio/small/{{IMAGE FILENAME (LARGE)}} 800w" alt="{{A LITERAL DESCRIPTION OF WHAT CAN BE SEEN IN THE IMAGE. BE AS OBJECTIVE AS POSSIBLE, AND WRITE AS THOUGH THERE WERE NO CONTEXT}}">
+
+						<figcaption>
+							<dl>
+								<dt class="visually-hidden">Figure Contents</dt>
+								<dd>{{A CONTEXTUAL DESCRIPTION OF THE IMAGE}}</dd>
+								<dt>{{Choose One: "Photograph" or "Image"}} By</dt>
+								<dd><a href="{{PHOTOGRAPHER'S URL or YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL...whichever is the relevant one}}">{{NAME OF PHOTOGRAPHER AND/OR IMAGE CREATOR or YOUR NAME}}</a></dd>
+							</dl>
+						</figcaption>
+					</figure>
+					<!--  -->
+
+				</section>
+
+				<section>
+				<h2>About This Piece</h2>
+					<address>
+						<dl>
+							<dt class="visually-hidden">Name</dt>
+							<dd class="visually-hidden">{{PORTFOLIO PIECE NAME}}</dd>
+							<dt class="visually-hidden">Created By</dt>
+							<dd class="visually-hidden"><a href="{{YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}" rel="author">{{YOUR NAME}}</a></dd>
+							<dt>Year</dt>
+							<dd>{{YEAR PIECE WAS CREATED}}</dd>
+							<dt>Medium</dt>
+							<dd>{{PORTFOLIO PIECE MEDIUM}}</dd>
+						</dl>
+					</address>
+
+					<dl>
+						<dt>Description</dt>
+						<dd>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</dd>
+						<dt class="visually-hidden">Related Links</dt>
+
+						<!-- Copy and paste the <dd> below for every related link you want to include: -->
+						<dd><a href="{{URL FOR LINK RELATED TO THIS PIECE or YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}" title="{{URL FOR LINK RELATED TO THIS PIECE or YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}">{{LINK TEXT}}</a></dd>
+						<!--  -->
+
+					</dl>
+				</section>
+
+				<a href="#portfolio-pieces-navigation">Back to Portfolio Pieces<span class="visually-hidden"> Navigation</span></a>
+			</article>
 			<!--  -->
+
 		</section>
 	</main>
 

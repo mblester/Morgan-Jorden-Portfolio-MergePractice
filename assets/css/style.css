@@ -178,6 +178,33 @@ main>section, article {
 	opacity: 1;
 }
 
+/* Portfolio Piece Gallery Figure(s) */
+
+.portfolio-piece-figure {
+	padding: 1em;
+	position: relative;
+}
+
+.portfolio-piece-figure figcaption {
+	height: inherit;
+	width: inherit;
+	padding: inherit;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: translateX(-110vw);
+}
+
+.portfolio-piece-figure:hover figcaption {
+	transform: none;
+}
+
+.portfolio-piece-figure img {
+
+}
+
 /*closes MODULES*/
 
 /*- 4 - STATE */

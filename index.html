@@ -30,13 +30,13 @@
 					<dl>
 						<!-- Repeat these two for every Social Media Link: -->
 						<dt>{{SOCIAL MEDIA SERVICE'S NAME}}</dt>
-						<dd><a href="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}">{{YOUR ACCOUNT NAME or USERNAME FOR THAT SERVICE}}</a></dd>
+						<dd><a href="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}" title="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}">{{YOUR ACCOUNT NAME or USERNAME FOR THAT SERVICE}}</a></dd>
 
 						<dt>{{SOCIAL MEDIA SERVICE'S NAME}}</dt>
-						<dd><a href="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}">{{YOUR ACCOUNT NAME or USERNAME FOR THAT SERVICE}}</a></dd>
+						<dd><a href="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}" title="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}">{{YOUR ACCOUNT NAME or USERNAME FOR THAT SERVICE}}</a></dd>
 
 						<dt>{{SOCIAL MEDIA SERVICE'S NAME}}</dt>
-						<dd><a href="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}">{{YOUR ACCOUNT NAME or USERNAME FOR THAT SERVICE}}</a></dd>
+						<dd><a href="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}" title="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}">{{YOUR ACCOUNT NAME or USERNAME FOR THAT SERVICE}}</a></dd>
 						<!--  -->
 					</dl>
 				</div>
@@ -132,14 +132,16 @@
 							<dd class="visually-hidden"><a href="{{YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}" rel="author">{{YOUR NAME}}</a></dd>
 							<dt>Year</dt>
 							<dd>{{YEAR PIECE WAS CREATED}}</dd>
-							<dt>Medium</dt>
-							<dd>{{PORTFOLIO PIECE MEDIUM}}</dd>
 						</dl>
 					</address>
 
 					<dl>
+						<dt>Medium</dt>
+						<dd>{{PORTFOLIO PIECE MEDIUM}}</dd>
 						<dt>Description</dt>
 						<dd>
+
+							<!-- Add or remove as many paragraphs as you like here: -->
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -160,6 +162,8 @@
 							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<!--  -->
+
 						</dd>
 						<dt class="visually-hidden">Related Links</dt>
 
@@ -170,7 +174,7 @@
 					</dl>
 				</section>
 
-				<a href="#portfolio-pieces-navigation">Back to Portfolio Pieces<span class="visually-hidden"> Navigation</span></a>
+				<a href="#portfolio-pieces-navigation" class="back-to-portfolio-navigation-button">Back to Portfolio Pieces<span class="visually-hidden"> Navigation</span></a>
 			</article>
 			<!--  -->
 
@@ -182,6 +186,6 @@
 		<p><small class="copyright-info">&copy; {{YOUR NAME}}</small></p>
 		<!--  -->
 	</footer>
-<script src="assets/js/min/main-min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

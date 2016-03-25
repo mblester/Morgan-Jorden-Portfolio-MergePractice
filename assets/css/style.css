@@ -31,7 +31,7 @@ body {
 	margin: 0;
 }
 
-body>header, body>footer {
+body>header h1, body>header .tagline, body>header section, body>footer {
 	padding-left: 1em;
 	padding-right: 1em;
 }
@@ -44,7 +44,7 @@ address {
 	font-style: normal;
 }
 
-address dd {
+body>header address dd {
 	margin-left: 0;
 }
 
@@ -95,6 +95,8 @@ main>section, article {
 }
 
 .major-navigation > ul {
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: 0;
 	list-style-type: none;
 }
@@ -178,31 +180,95 @@ main>section, article {
 	opacity: 1;
 }
 
+.portfolio-piece dl {
+	margin-top: 0;
+}
+
+.portfolio-piece address dl {
+	margin-bottom: 0;
+}
+
+.portfolio-piece-figures {
+	position: relative;
+}
+
+.js-enabled .portfolio-piece-figures .gallery-controls {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.gallery-controls ul {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.gallery-controls button {
+	height: initial;
+	width: initial;
+	position: absolute;
+}
+
 /* Portfolio Piece Gallery Figure(s) */
 
 .portfolio-piece-figure {
+	width: 80%;
+	margin: 0 auto;
 	padding: 1em;
+	border: 1px solid #000;
+	overflow: hidden;
 	position: relative;
+}
+
+.portfolio-piece-figure dd {
+	margin-left: 0;
 }
 
 .portfolio-piece-figure figcaption {
 	height: inherit;
 	width: inherit;
 	padding: inherit;
+	font-size: 16px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	transform: translateX(-110vw);
+	z-index: 3;
 }
 
 .portfolio-piece-figure:hover figcaption {
+	margin: 0 auto;
 	transform: none;
 }
 
-.portfolio-piece-figure img {
+.portfolio-piece-figure:hover img {
+	opacity: 0.4;
+}
 
+.portfolio-piece-figure img {
+	max-width: 100%;
+	height: inherit;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+
+.back-to-portfolio-navigation-button {
+	max-width: 300px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
 }
 
 /*closes MODULES*/
@@ -243,6 +309,14 @@ main>section, article {
 	.major-navigation {
 		border: none;
 		background-color: #fff;
+	}
+
+	.major-navigation li:first-of-type {
+		margin-left: 24px;
+	}
+
+	.major-navigation li:last-of-type {
+		margin-right: 24px;
 	}
 
 	.major-navigation, #top:target .major-navigation {

@@ -48,10 +48,6 @@ body>header address dd {
 	margin-left: 0;
 }
 
-.social-media-links {
-	margin-bottom: 2em;
-}
-
 /* Typography */
 
 body {
@@ -180,6 +176,24 @@ main>section, article {
 	opacity: 1;
 }
 
+.profile-picture {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: hidden;
+}
+
+h2 + .profile-picture {
+	padding-top: 0;
+}
+
+.profile-picture img {
+	max-width: 100%;
+	height: inherit;
+	margin: 0 auto;
+	display: block;
+}
+
 .portfolio-piece dl {
 	margin-top: 0;
 }
@@ -220,7 +234,6 @@ main>section, article {
 	width: 80%;
 	margin: 0 auto;
 	padding: 1em;
-	border: 1px solid #000;
 	overflow: hidden;
 	position: relative;
 }
@@ -264,9 +277,14 @@ main>section, article {
 	position: relative;
 }
 
+.portfolio-piece-related-link {
+	margin-left: 0;
+	text-align: center;
+}
+
 .back-to-portfolio-navigation-button {
 	max-width: 300px;
-	margin: 0 auto;
+	margin: 48px auto 0 auto;
 	text-align: center;
 	display: block;
 }
@@ -306,6 +324,14 @@ main>section, article {
 }
 
 @media (min-width: 960px) {
+	.navigation-toggle-button:focus, #top:target .navigation-toggle-button:focus, .navigation-close-button:focus {
+		font-size: initial;
+	}
+
+	.social-media-links {
+		margin-bottom: 2em;
+	}
+
 	.major-navigation {
 		border: none;
 		background-color: #fff;
@@ -323,6 +349,14 @@ main>section, article {
 		/*When the viewport is 960px wide or wider, place .major-navigation back into the flow of the document */
 		transform: none;
 		position: static;
+	}
+
+	.navigation-close-button:focus, #top:target .navigation-close-button:focus {
+		opacity: 1;
+	}
+
+	.navigation-toggle-button:focus:before, #top:target .navigation-toggle-button:focus:after, .navigation-close-button:focus:before, #top:target .navigation-close-button:focus:before, .navigation-close-button:focus:after, #top:target .navigation-close-button:focus:after {
+		display: none;
 	}
 
 	main {
@@ -390,7 +424,7 @@ main>section, article {
 		padding-top: 2em;
 	}
 
-	p {
+	p, dt, dd {
 		font-size: initial;
 	}
 }

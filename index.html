@@ -10,9 +10,8 @@
 <body>
 	<header>
 	<h1>{{YOUR NAME}}</h1>
-		<a href="#major-navigation" class="navigation-toggle-button">Skip to Major Navigation</a>
-
 		<p class="tagline">{{YOUR JOB TITLE or YOUR TAGLINE}}</p>
+		<a href="#major-navigation" class="navigation-toggle-button">Skip to Major Navigation</a>
 
 		<section id="contact-information">
 		<h2 class="visually-hidden">Contact Information</h2>
@@ -31,13 +30,8 @@
 						<!-- Repeat these two for every Social Media Link: -->
 						<dt>{{SOCIAL MEDIA SERVICE'S NAME}}</dt>
 						<dd><a href="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}" title="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}">{{YOUR ACCOUNT NAME or USERNAME FOR THAT SERVICE}}</a></dd>
-
-						<dt>{{SOCIAL MEDIA SERVICE'S NAME}}</dt>
-						<dd><a href="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}" title="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}">{{YOUR ACCOUNT NAME or USERNAME FOR THAT SERVICE}}</a></dd>
-
-						<dt>{{SOCIAL MEDIA SERVICE'S NAME}}</dt>
-						<dd><a href="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}" title="{{YOUR ACCOUNT'S URL FOR THAT SERVICE}}">{{YOUR ACCOUNT NAME or USERNAME FOR THAT SERVICE}}</a></dd>
 						<!--  -->
+
 					</dl>
 				</div>
 			</address>
@@ -58,13 +52,27 @@
 	<main>
 		<section id="about-me">
 		<h2>About Me</h2>
-			<!-- PASTE YOUR FILLED-IN "profilepicturetemplate.html" <figure> anywhere within this section (as long as it's outside the "<p> </p>"s)-->
+
+			<!-- Move the <figure> anywhere within this section (as long as it isn't inside a <p></p>)-->
+
+			<figure class="profile-picture">
+				<img src="assets/images/portfolio/large/dummy.png" srcset="assets/images/global/small/{{PROFILE PICTURE FILENAME (SMALL)}} 200w, assets/images/global/medium/{{PROFILE PICTURE FILENAME (MEDIUM)}} 500w, assets/images/global/large/{{PROFILE PICTURE FILENAME (LARGE)}} 800w" alt="{{A literal description of what can be seen in your profile picture (objective description; no context)}}">
+
+				<figcaption class="visually-hidden">
+					<dl>
+						<dt>Figure Contents</dt>
+						<dd><a href="{{YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}" title="{{YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}">{{YOUR NAME}}</a>'s profile picture</dd>
+					</dl>
+				</figcaption>
+			</figure>
+			
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -105,8 +113,9 @@
 				<section class="portfolio-piece-figures">
 				<h2 class="visually-hidden">Gallery</h2>
 
-					<!-- COPY AND PASTE EACH SUBSEQUENT <figure> BELOW THIS <figure> -->
+					<!-- COPY THIS <figure> (aka gallery entry) AND PASTE SUBSEQUENT FIGURES BELOW IT -->
 					<figure class="portfolio-piece-figure">
+
 						<img src="assets/images/portfolio/large/dummy.png" srcset="assets/images/portfolio/small/{{IMAGE FILENAME (SMALL)}} 200w, assets/images/portfolio/medium/{{IMAGE FILENAME (MEDIUM)}} 500w, assets/images/portfolio/small/{{IMAGE FILENAME (LARGE)}} 800w" alt="{{A LITERAL DESCRIPTION OF WHAT CAN BE SEEN IN THE IMAGE. BE AS OBJECTIVE AS POSSIBLE, AND WRITE AS THOUGH THERE WERE NO CONTEXT}}">
 
 						<figcaption>
@@ -167,8 +176,8 @@
 						</dd>
 						<dt class="visually-hidden">Related Links</dt>
 
-						<!-- Copy and paste the <dd> below for every related link you want to include: -->
-						<dd><a href="{{URL FOR LINK RELATED TO THIS PIECE or YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}" title="{{URL FOR LINK RELATED TO THIS PIECE or YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}">{{LINK TEXT}}</a></dd>
+						<!-- Copy and paste this <dd> (similar to a list item) for every related link you want to include: -->
+						<dd class="portfolio-piece-related-link"><a href="{{URL FOR LINK RELATED TO THIS PIECE or YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}" title="{{URL FOR LINK RELATED TO THIS PIECE or YOUR WEBSITE'S URL or YOUR PRIMARY SOCIAL MEDIA ACCOUNT URL}}">{{LINK TEXT}}</a></dd>
 						<!--  -->
 
 					</dl>

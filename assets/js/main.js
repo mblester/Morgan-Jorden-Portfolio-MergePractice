@@ -30,7 +30,7 @@
 			newSectionHeading.appendChild(newSectionHeadingText);
 			newSectionHeading.classList.add("visually-hidden");
 
-			newSectionButtonLeftText = document.createTextNode("View Previous Image (requires CSS");
+			newSectionButtonLeftText = document.createTextNode("View Previous Image (requires CSS)");
 			newSectionButtonLeft = document.createElement("button");
 			newSectionButtonLeft.appendChild(newSectionButtonLeftText);
 			newSectionButtonLeft.type="button";

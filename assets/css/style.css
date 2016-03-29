@@ -218,6 +218,7 @@ h2 + .profile-picture {
 .gallery-controls button {
 	height: initial;
 	width: initial;
+	font-size: 0;
 
 }
 
@@ -240,6 +241,16 @@ h2 + .profile-picture {
 	right: 0;
 }
 
+.gallery-controls li:first-of-type button:before {
+	content: "<";
+	font-size: initial;
+}
+
+.gallery-controls li:last-of-type button:before {
+	content: ">";
+	font-size: initial;
+}
+
 /* Portfolio Piece Gallery Figure(s) */
 
 .portfolio-piece-figure {
@@ -256,7 +267,7 @@ h2 + .profile-picture {
 
 .portfolio-piece-figure figcaption {
 	height: inherit;
-	width: 50%;
+	width: inherit;
 	margin: 0 auto;
 	padding: inherit;
 	font-size: 16px;

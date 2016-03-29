@@ -216,10 +216,11 @@ h2 + .profile-picture {
 }
 
 .gallery-controls button {
-	height: initial;
-	width: initial;
+	height: 0;
+	width: 0;
+	padding: 0;
+	border: none;
 	font-size: 0;
-
 }
 
 .gallery-controls li {
@@ -239,16 +240,31 @@ h2 + .profile-picture {
 .gallery-controls li:last-of-type {
 	left: 75%;
 	right: 0;
+	text-align: right;
+}
+
+/*.gallery-controls li:first-of-type button {
+	float: left;
+}
+
+.gallery-controls li:last-of-type button {
+	float: right;
+}*/
+
+.gallery-controls li:first-of-type button:before, .gallery-controls li:last-of-type button:before {
+	padding: 0.5em;
+	background-color: transparent;
+	color: lightgrey;
+	color: rgba(0,0,0,0.2);
+	font-size: 48px;
 }
 
 .gallery-controls li:first-of-type button:before {
 	content: "<";
-	font-size: initial;
 }
 
 .gallery-controls li:last-of-type button:before {
 	content: ">";
-	font-size: initial;
 }
 
 /* Portfolio Piece Gallery Figure(s) */

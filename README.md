@@ -53,7 +53,7 @@ Now is the time you both get to work together & individually. Your task is to cr
   * `<li><a href="#about-me">About Me</a></li>`
   * `<li><a href="#portfolio-pieces">Portfolio</a></li>`
 
-1. Coordinate together on what class names or ids you'd like to use but decide on your own what size to scale and grow font-size with on your own.
+1. Coordinate together on what class names or ids you'd like to use **but** decide on your **own** what size to scale and grow font-size with and what transition values you want to use on your own.
 1. Work in your own branches.
 1. Use the new `landingPage-transforms.css` to add your CSS rules.
 1. When you've each satisfied the requirements `git status, add, commit, push`.

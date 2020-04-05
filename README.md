@@ -1,2 +1,5 @@
 # portfolio-website-boilerplate
-A template for a lightweight, responsive portfolio website. Please copy/remix this code however you like.
+
+This is a boilerplate code base for a portfolio website intended for a new developer to quickly begin building a website for themselves. After the "Merge Conflict" class lesson feel free to use it as a jumping off point for your last project: New Portfolio Website.
+
+1. ...

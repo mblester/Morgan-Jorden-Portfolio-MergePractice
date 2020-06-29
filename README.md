@@ -9,8 +9,8 @@ To practice correcting merge conflicts we're going to work in pairs, create and 
 ### Part 1: Cloning the code, Creating a new repo, & Pointing the code at the new remote repo
 
 1. Students pair up.
-1. One of the students, we'll call Student A, will clone this [101-Portfolio-Boilerplate-Boilerplate repo](https://github.com/AustinCodingAcademy/101-Portfolio-Boilerplate-Boilerplate/settings) into a place you usually work in.
-1. Now go to GitHub and create a **NEW** public repo **without** a README called: " MyName-PartnerName-Portfolio-MergePractice " where `myName` equals Partner A's name and `PartnerName` equals Partner B's name.
+1. One of the students, we'll call Student A, will clone (NO FORK) this [101-Portfolio-Boilerplate-Boilerplate repo](https://github.com/AustinCodingAcademy/101-Portfolio-Boilerplate-Boilerplate/settings) into a place you usually work in.
+1. Now go to GitHub and create a **NEW** public repo **with** a README called: " MyName-PartnerName-Portfolio-MergePractice " where `myName` equals Partner A's name and `PartnerName` equals Partner B's name.
 
     > *WHY? - We're creating this new repo so that you can push this cloned code into it and have your own repo shared between you and not forked off of ACA's repo.*
 

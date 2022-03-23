@@ -1,0 +1,39 @@
+*{
+  text-decoration: none;
+  width: 200px;
+  list-style: none;
+  height: 50px;
+}
+
+#contact {
+width: 200px;
+transition: linear 2s ease-out 250ms;]
+}
+
+#contact:hover{
+  width: 400px;
+  background-color: aquamarine;
+}
+
+@keyframes clicked {
+0% font-size: inherit;
+
+}
+
+#about {
+  transition: ease 1s;
+
+}
+
+#about:hover {
+  height: 200px;
+  background-color: white;
+}
+
+#portfolio{
+  width: 300px;
+  transition: all cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+#portfolio:hover{
+  font-size: larger;
+}

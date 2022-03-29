@@ -17,7 +17,6 @@ transition: linear 2s ease-out 250ms;]
 
 @keyframes clicked {
 0% font-size: inherit;
-
 }
 
 #about {

@@ -1,38 +1,104 @@
-*{
-  text-decoration: none;
-  width: 200px;
-  list-style: none;
-  height: 50px;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-#contact {
-width: 200px;
-transition: linear 2s ease-out 250ms;]
+ul{
+   
+    margin: 20px;
+
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    color: purple;
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    list-style: none;
+}
+
+#contact{
+        background: Khaki;
+        border-radius: 5px;
+        transition: transform 1s;
+        margin: 50px;
+      }
 #contact:hover{
-  width: 400px;
-  background-color: aquamarine;
-}
+    background-color: purple;
 
-@keyframes clicked {
-0% font-size: inherit;
 }
+#contact:active{
+    animation-name: clicked;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+    
+@keyframes clicked {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+   
+
 
 #about {
-  transition: ease 1s;
+    background: blue;
+    border-radius: 5px;
+    transition: transform 1s;
+    width: 150px;
+    margin: 50px;
+  }
 
+  #about:hover{
+    transform: rotate(-70deg);
+    background-color: green;
+    font-size: larger;
+  }
+
+  #about:active{
+    animation-name: clicked1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+  @keyframes clicked1 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+#portfolio {
+    background: pink;
+    border-radius: 5px;
+    transition: transform 1s;
+    width: 150px;
+    margin: 50px;
 }
 
-#about:hover {
-  height: 200px;
-  background-color: white;
-}
-
-#portfolio{
-  width: 300px;
-  transition: all cubic-bezier(0.55, 0.085, 0.68, 0.53);
-}
 #portfolio:hover{
-  font-size: larger;
+    transform: rotate(-30deg) scale(2);
+    font-size:x-large;
 }
